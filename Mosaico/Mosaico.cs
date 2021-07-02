@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -9,49 +8,55 @@ namespace Mosaico
     {
         private Image[] imagens;
         private Timer timer = new Timer();
-        private FolderBrowserDialog browser = new FolderBrowserDialog();
         
-        private int intervalo = 5000;
         
+        private Panel _panel2 = new Panel();
+
+        private int _intervalo = 5000;
+
         public Mosaico()
         {
-            
+            this.timer.Tick += this.Timer_Tick;
+            this._panel2.Dock = DockStyle.Fill;
+            this._panel2.Location = new Point(0, 0);
+            this._panel2.Name = "imagem";
+            this._panel2.TabIndex = 1;
+            //this._panel2.BackColor = Color.Aqua;
         }
-
-        public string browseFiles()
-        {
-            this.browser.ShowDialog();
-            return this.browser.SelectedPath;
-        }
-
-        
-        
-        
-        
-        
-        
         
         public void StartTimer()
         {
-            this.timer.Start();
+            timer.Start();
         }
 
         public void StopTimer()
         {
-            this.timer.Stop();
+            timer.Stop();
         }
 
-        public void setIntervalo(int intervalo)
+        private void Timer_Tick(object sender, EventArgs eventArgs)
         {
-            this.intervalo = intervalo;
-            this.timer.Interval = intervalo;
+            
         }
 
-        public int getIntervalo()
+
+
+
+
+        public Panel GetPanel()
         {
-            return this.intervalo;
+            return this._panel2;
         }
 
+        public void SetIntervalo(int intervalo)
+        {
+            this._intervalo = intervalo;
+            timer.Interval = intervalo;
+        }
 
+        public int GetIntervalo()
+        {
+            return _intervalo;
+        }
     }
 }
