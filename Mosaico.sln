@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mosaico", "Mosaico\Mosaico.csproj", "{3C071DA7-3A08-46BD-A217-F1C4B7F59CCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C071DA7-3A08-46BD-A217-F1C4B7F59CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C071DA7-3A08-46BD-A217-F1C4B7F59CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C071DA7-3A08-46BD-A217-F1C4B7F59CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C071DA7-3A08-46BD-A217-F1C4B7F59CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
